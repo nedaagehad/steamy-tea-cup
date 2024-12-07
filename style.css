@@ -1,0 +1,190 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("./images/wooden-board.jpg");
+  background-size: 100% 130%;
+  background-repeat: no-repeat;
+  background-position: bottom;
+  padding: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 65px;
+  position: relative;
+}
+
+p {
+  padding: 24px;
+  background-color: #000;
+  border-radius: 15px;
+  font-size: 32px;
+  box-shadow: 3px 3px 5px #500700;
+  font-family: "Bowlby One";
+  color: rgb(186, 70, 70);
+  text-shadow: 1px 1px #FFF ;
+}
+
+.cup {
+  width: 300px;
+  height: 350px;
+  background: rgba(165, 165, 165, 0.1);
+  box-shadow: 0 0 40px rgba(66, 66, 66, 0.418) inset;
+  backdrop-filter: blur(1px);
+  border-radius: 5px 5px 40% 40%;
+  position: relative;
+  z-index: 2;
+}
+
+.cup::before {
+  content: "";
+  height: calc(100% - 340px);
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgb(165, 165, 165),
+    rgba(165, 165, 165, 0.1)
+  );
+  position: absolute;
+  top: 0;
+  border-radius: 5px 5px 0 0;
+  box-shadow: 0 1px 40px rgba(92, 92, 92, 0.516);
+}
+
+.cup::after {
+  content: "";
+  height: 100%;
+  width: calc(100% - 60px);
+  position: absolute;
+  left: 50%;
+  top: 0;
+  border-radius: inherit;
+  transform: translateX(-50%);
+  border: 30px inset rgba(255, 255, 255, 0.355);
+  border-bottom: none;
+  border-top: none;
+}
+
+.cup-shadow {
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  width: 80%;
+  height: 50px;
+  transform: translateX(-50%);
+  background-image: radial-gradient(#000000c0, transparent);
+  backdrop-filter: blur(40px);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.handle {
+  width: 50%;
+  height: 60%;
+  position: absolute;
+  border: 5px inset rgba(255, 255, 255, 0.368);
+  border-left: none;
+  border-bottom: none;
+  border-top: none;
+  background-image: linear-gradient(
+    70deg,
+    transparent 35%,
+    rgba(92, 92, 92, 0.516)
+  );
+  top: 40%;
+  right: -20%;
+  border-radius: 50%;
+  transform: rotate(23deg) translateY(-50%);
+}
+
+.handle::after {
+  content: "";
+  width: calc(100% - 40%);
+  height: calc(100% - 40%);
+  position: absolute;
+  left: 20%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: 4px solid rgba(165, 165, 165, 0.531);
+  border-left: none;
+  border-bottom: none;
+  background-image: linear-gradient(
+    90deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.412)
+  );
+}
+
+.tea {
+  width: calc(100% - 70px);
+  height: calc(100% - 140px);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 0 0 50% 50%;
+  transform: translate(-50%, -50%);
+  background-image: radial-gradient(ellipse at right, #500700, transparent),
+    radial-gradient(ellipse at left, #6f2b25, transparent),
+    linear-gradient(to bottom, rgb(187, 0, 0), rgb(54, 0, 0));
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.tea::after {
+  content: "";
+  width: 100%;
+  height: 10%;
+  position: absolute;
+  top: -10px;
+  left: 0;
+  border-radius: 50%;
+  background-image: radial-gradient(ellipse at right, rgb(187, 0, 0), #500700a7),
+    radial-gradient(ellipse at left, rgb(187, 0, 0), #500700d3),
+    linear-gradient(to bottom, rgb(187, 0, 0), transparent);
+}
+
+.vapour {
+  width: 100%;
+  height: 120px;
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  top: -120px;
+  justify-content: center;
+}
+
+.vapour span {
+  min-width: 8px;
+  height: 120px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  animation: vapourize 7s linear infinite;
+  opacity: 0;
+  filter: blur(5px);
+  animation-delay: calc(var(--i) * -0.5s);
+}
+
+@keyframes vapourize {
+  0% {
+    opacity: 0;
+    transform: translateY(0) scaleX(1);
+  }
+  50% {
+    transform: translateY(-50px) scaleX(5);
+    opacity: 1;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(-150px) scaleX(10);
+  }
+}
