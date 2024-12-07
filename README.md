@@ -1,8 +1,8 @@
 
-<h1 style="text-align: center">
+<h1 style="text-align: center;">
 ☕ Steaming Cup of Tea Animation
 </h1>
-
+<br>
 ## 🌟 Project Overview
 
 This project demonstrates the power and versatility of CSS animations using custom properties. The centerpiece of this project is an animation of a steaming glass-like cup of Tea, created entirely with pure **HTML** and **CSS**. It highlights how the style="--i:${number}" technique can be used to create dynamic, reusable animations with minimal effort.
@@ -98,6 +98,7 @@ Here’s a glimpse of the final output:
 ## 🎥 Demo
 
 Watch the Animation in Action
+<br>
 !["A Steamy Cup of Tea"](./images/steamy-cup-of-tea.gif)
 
 <br>
