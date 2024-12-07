@@ -27,7 +27,7 @@ p {
   border-radius: 15px;
   font-size: 32px;
   box-shadow: 3px 3px 5px #500700;
-  font-family: "Bowlby One";
+  font-family: "Bowlby One", Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   color: rgb(186, 70, 70);
   text-shadow: 1px 1px #FFF ;
 }
