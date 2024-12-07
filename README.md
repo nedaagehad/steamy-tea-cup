@@ -3,8 +3,6 @@
 ☕ Steaming Cup of Tea Animation
 </h1>
 
----
-
 ## 🌟 Project Overview
 
 This project demonstrates the power and versatility of CSS animations using custom properties. The centerpiece of this project is an animation of a steaming glass-like cup of Tea, created entirely with pure **HTML** and **CSS**. It highlights how the style="--i:${number}" technique can be used to create dynamic, reusable animations with minimal effort.
@@ -97,12 +95,10 @@ Here’s a glimpse of the final output:
 
 <br>
 
-## 🎥 Video Demo
+## 🎥 Demo
 
 Watch the Animation in Action
-<video width="100%" height="500" controls>
-  <source src="./videos/steamy-cup-of-tea.mp4" type="video/mp4">
-</video>
+!["A Steamy Cup of Tea"](./images/steamy-cup-of-tea.gif)
 
 <br>
 
